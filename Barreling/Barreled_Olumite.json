@@ -1,0 +1,62 @@
+{
+  "additions": {
+    "recipes": {
+      "_portable_olumite": {
+        "name": "Barreling Olumite",
+        "inputElemental_data": {
+          "_base_olumite": {
+            "amount_str": "1000"
+          }
+        },
+        "icon_identifier": "barrel_olumite",
+        "output_data": {
+          "_seer_barreled_olumite": {
+            "amount": 10,
+            "percentage_str": "1"
+          }
+        },
+        "timeMs": 1000,
+        "tags": [
+          "barrel_filler"
+        ],
+        "__template": "_base_portable_fuel"
+      },
+      "_olumite_unbarrel": {
+        "name": "Unbarreling Olumite",
+        "icon_identifier": "olumite",
+        "input_data": {
+          "_seer_barreled_olumite": {
+            "amount": 1,
+            "percentage_str": "1"
+          }
+        },
+        "output_data": {
+          "_base_xenoferrite_plates": {
+            "amount": 10,
+            "percentage_str": "1"
+          }
+        },
+        "inputElemental_data": {},
+        "outputElemental_data": {
+          "_base_olumite": {
+            "amount_str": "1000"
+          }
+        },
+        "timeMs": 1000,
+        "tags": [
+          "barrel_dumper"
+        ],
+        "__template": "_base_portable_fuel"
+      }
+    },
+    "items": {
+      "_seer_barreled_olumite": {
+        "name": "Barreled Olumite",
+        "__template": "_base_portable_fuel",
+        "flags": "0",
+        "icon_identifier": "barrel_olumite",
+        "__conveyorItemTexture": "barrel_fluid_purple_texture"
+      }
+    }
+  }
+}

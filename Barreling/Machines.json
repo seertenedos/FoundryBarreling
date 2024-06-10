@@ -1,0 +1,138 @@
+{
+  "additions": {
+    "recipes": {
+      "_seer_barrel_dumper": {
+          "__template": "_base_assembler_fluid_i",
+          "name": "Barrel Dumper",
+          "input_data": {
+              "_base_xenoferrite_plates": {
+                  "amount": 1,
+                  "percentage_str": "1"
+              },
+              "_base_mic_i": {
+                  "amount": 1,
+                  "percentage_str": "1"
+              }
+          },
+          "output_data": {
+              "_seer_barrel_dumper": {
+                  "amount": 1,
+                  "percentage_str": "1"
+              }
+          },
+          "relatedItemTemplateIdentifier": "_seer_barrel_dumper",
+          "sortingOrderWithinRowGroup": 205
+      },
+      "_seer_barrel_filler": {
+          "__template": "_base_assembler_fluid_i",
+          "name": "Barrel Filler",
+          "input_data": {
+              "_base_xenoferrite_plates": {
+                  "amount": 1,
+                  "percentage_str": "1"
+              },
+              "_base_mic_i": {
+                  "amount": 1,
+                  "percentage_str": "1"
+              }
+          },
+          "output_data": {
+              "_seer_barrel_filler": {
+                  "amount": 1,
+                  "percentage_str": "1"
+              }
+          },
+          "relatedItemTemplateIdentifier": "_seer_barrel_filler",
+          "sortingOrderWithinRowGroup": 204
+      }
+    },
+    "items": {
+      "_seer_barrel_filler": {
+        "__template": "_base_assembler_fluid_i",
+        "name": "Barrel Filler",
+        "identifier": "_seer_barrel_filler",
+        "buildableObjectIdentifer": "_seer_barrel_filler"
+      },
+      "_seer_barrel_dumper": {
+        "__template": "_base_assembler_fluid_i",
+        "name": "Barrel Dumper",
+        "identifier": "_seer_barrel_dumper",
+        "buildableObjectIdentifer": "_seer_barrel_dumper"
+      }
+    },
+    "buildings": {
+      "_seer_barrel_filler": {
+        "__template": "_base_assembler_fluid_i",
+        "name": "Barrel Filler",
+        "identifier": "_seer_barrel_filler",
+        "fbm_fluidBoxes": [],
+        "fbm_ioFluidBoxes": [
+          {
+            "type": "Generic",
+            "transferSpeedType": "CustomCB",
+            "isInput": true,
+            "capacity_l": 2000,
+            "transferRatePerSecond_l": 2000,
+            "fixedElementTemplateIdentifier": "",
+            "connectors": [
+              {
+                "groupIdentifier": "_base_pipe",
+                "localOffset_origin": {
+                  "x": 0,
+                  "y": 2,
+                  "z": 1
+                },
+                "localOffset_target": {
+                  "x": -1,
+                  "y": 2,
+                  "z": 1
+                }
+              }
+            ]
+          }
+        ],
+        "producer_recipeType_tags": [
+          "barrel_filler"
+        ],
+        "autoProducer_recipeTimeModifier_str": "1",
+        "autoProducer_recipeType_tag": "barrel_filler"
+      },
+      "_seer_barrel_dumper": {
+        "__template": "_base_assembler_fluid_i",
+        "name": "Barrel Dumper",
+        "identifier": "_seer_barrel_dumper",
+        "fbm_fluidBoxes": [],
+        "fbm_ioFluidBoxes": [
+          {
+            "type": "Generic",
+            "transferSpeedType": "CustomCB",
+            "isInput": false,
+            "capacity_l": 2000,
+            "transferRatePerSecond_l": 2000,
+            "fixedElementTemplateIdentifier": "",
+            "connectors": [
+              {
+                "groupIdentifier": "_base_pipe",
+                "localOffset_origin": {
+                  "x": 0,
+                  "y": 2,
+                  "z": 1
+                },
+                "localOffset_target": {
+                  "x": -1,
+                  "y": 2,
+                  "z": 1
+                }
+              }
+            ]
+          }
+        ],
+        "producer_recipeType_tags": [
+          "barrel_dumper"
+        ],
+        "autoProducer_recipeTimeModifier_str": "1",
+        "autoProducer_recipeType_tag": "barrel_dumper"
+      }
+    }
+  }
+}
